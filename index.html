@@ -1,0 +1,13 @@
+<html>
+    <head>
+        <script type="text/javascript">
+            const urlSearchParams = new URLSearchParams(window.location.search);
+            const params = Object.fromEntries(urlSearchParams.entries());
+            document.title = params.title;
+            setTimeout(() => window.location.replace(params.redirect), 4000);        
+        </script>
+    </head>
+    <body>
+        <h3 id="redirect-text">Redirecting...</h3>
+    </body>
+</html>
